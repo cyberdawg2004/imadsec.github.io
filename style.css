@@ -43,6 +43,10 @@ section {
 	box-shadow: 0 0 30px #27ae601a;
 	animation: fadeInSlide 3.6s ease forwards;
 	opacity: 0;
+	text-align: left;
+}
+selection#about {
+	text-align: center;
 }
 h2 {
 	color: #2ecc71;
@@ -119,11 +123,12 @@ body.light-mode a:hover {
 .glitch-text {
 	font-size: 4rem;
 	color: #2ecc71;
-	text-shadow: 0 0 10px #2ecc71, 0 0 20px #00ff99, 0 0 40px #00ffcc;
-	animation: glitch 2s infinite;
+	text-shadow: 0 0 10px #2ecc71, 0 0 20px #00ff99;
 	font-family: 'Share Tech Mono', monospace;
 	z-index: 3;
 	position: relative;
+	animation: glitch 2s infinite;
+	opacity: 1 !important;
 }
 .tagline {
 	font-size: 1.4rem;
@@ -211,26 +216,4 @@ section, .overlay-text, .about-desc {
 	margin-left: auto;
 	margin-right: auto;
 }
-@media screen and (max-width: 768px) {
-	.video {
-		height: auto;
-		padding-bottom: 60px;
-	{
-	.overlay-text {
-		padding: 40px 10px;
-	}
-	nav {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 10px;
-		margin-top: 20px;
-	}
-	nav a {
-		font-size: 1rem;
-		padding: 5px;
-	}
-	.glitch-text {
-		font-size: 2.5rem;
-	}
-}
+

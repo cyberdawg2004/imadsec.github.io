@@ -167,9 +167,11 @@ LANGUAGES
 	</footer>
 	<script> 
 		const toggleBtn = document.getElementById('toggleMode');
-		toggleBtn.addEventListener('click', () => {
-			document.body.classList.toggle('light-mode');
-		});
+		if (toggleBtn) {
+			toggleBtn.addEventListener('click', () => {
+				document.body.classList.toggle('light-mode');
+			});
+		}
 	</script>
 	<script>
 		const faders = document.querySelectorAll('.fade-in');
