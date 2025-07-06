@@ -17,7 +17,7 @@ h1 {
         font-size: 3rem;
         color: #2ecc71;
         text-shadow: 0 0 15px #27ae601a;
-        animation: fadeInSlide 1.2s ease forwards;
+        animation: fadeInSlide 2.6s ease forwards;
         opacity: 0;
 }
 nav {
@@ -29,7 +29,7 @@ nav a {
         text-decoration: none;
         font-weight: 600;
         font-size: 1.1rem;
-        transition: color 0.3s ease;
+        transition: color 2.3s ease;
 }
 nav a:hover {
         color: #2ecc71;
@@ -41,7 +41,7 @@ section {
 	background: rgba(34, 49, 34, 0.9);
 	border-radius: 8px;
 	box-shadow: 0 0 30px #27ae601a;
-	animation: fadeInSlide 1.2s ease forwards;
+	animation: fadeInSlide 3.6s ease forwards;
 	opacity: 0;
 }
 h2 {
@@ -120,7 +120,7 @@ body.light-mode a:hover {
 	font-size: 3,5rem;
 	color: #2ecc71;
 	text-shadow: 0 0 10px #2ecc71, 0 0 20px #2ecc71;
-	animation: glitch 2s infinite;
+	animation: glitch 4s infinite;
 	font-family: 'Share Tech Mono' monospace;
 }
 .tagline {
@@ -157,4 +157,24 @@ body.light-mode a:hover {
 	text-align: center;
 	animation: fadeInSlide 1.5s ease forwards;
 	opacity: 0;
+}
+#about {
+	text-align: center;
+	padding: 80px 20px;
+}
+.about-desc {
+	font-size: 1.4rem;
+	color: #c0c7c0
+	max-width: 800px;
+	margins: 20px auto;
+	line-height: 1.8;
+}
+.fade-in { 
+	opacity: 0;
+	transform: translateY(40px);
+	transition: all 2.3s ease-out;
+}
+.fade-in.show {
+	opacity: 1;
+	transform: translateY(0);
 }

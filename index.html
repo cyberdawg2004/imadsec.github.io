@@ -16,10 +16,10 @@
 <body>
 	<header class="video">
 		<video autoplay muted loop playsinline class="bg-video">
-			<source scr="assets/video.mp4" type="video/mp4" />
+			<source scr="assets/cyber.mp4" type="video/mp4" />
 		</video>
 		<div class="overlay-text">
-			<h1> class="glich-text">Imad Section</h1>
+			<h1 class="glich-text">Imad Section</h1>
 			<p class="tagline" >Cybersecurity ~ Linux ~ Love & Destruction</p>
 			<nav>
 				<a href="#projects">Projects</a>
@@ -53,87 +53,82 @@
                         </li
 		</ul>
 	</section>
-	<secion id="about" class="bio-section">
+	<secion id="about" class="fade-in">
 		<h2>About Me</h2>
-		<p>
+		<p class="about-desc">
 			 IT support specialist with skills in system maintenance, networking, and cybersecurity fundamentals. Handled malware prevention, and managed Git Hub workflows. Founder of an e-commerce brand and fitness enthusiast.
 		</p>
 	</section>
 	<section id="resume">
 		<h2>Resume</h2>
 		<pre class="resume-text">
-			Imad Baraja
+	Imad Baraja
 
-			Indonesian citizen & IT support specialist with skills in system maintenance, networking, and cybersecurity fundamentals. Handled malware prevention, and managed Git Hub workflows. Founder of an e-commerce brand and fitness enthusiast.
-
-			CONTACT
-			+967 77 514 4544 (WhatsApp)
-			imadbaraja2004@yahoo.com
-			LinkedIn: Imad Baraja
+Indonesian citizen & IT support specialist with skills in system maintenance, networking, and cybersecurity fundamentals. Handled malware prevention, and managed Git Hub workflows. Founder of an e-commerce brand and fitness enthusiast.
 	
-			EDUCATION
-			Education paused due to financial difficulties and conflict zones in Yemen. Still pushing forward with self-driven certifications and practical projects.
+	EDUCATION
+Education paused due to financial difficulties and conflict zones in Yemen. Still pushing forward with self-driven certifications and practical projects.
 
-			Arrasheed Smart University
-			Bachelor of Cyber Security (On Hold)
-			Sana'a, Yemen
-			2024 - 2025
+Arrasheed Smart University
+Bachelor of Cyber Security (On Hold)
+Sana'a, Yemen
+2024 - 2025
 
-			Swiss German University
-			Bachelor of IT Artificial Intelligence
-			Tangerang, Indonesia
-			2022 - 2023
+Swiss German University
+Bachelor of IT Artificial Intelligence
+Tangerang, Indonesia
+2022 - 2023
 
-			Amideast
-			Scholastic Assessment Test (SAT)
-			Sanaa, Yemen
-			2021
+Amideast
+Scholastic Assessment Test (SAT)
+Sanaa, Yemen
+2021
 
-			Yemen Modern Schools
-			High School
-			Sanaa, Yemen
-			2021
+Yemen Modern Schools
+High School
+Sanaa, Yemen
+2021
 
-			EXPERIENCE
-			Founder (Starter Business) - beBuy Store
-			2022 - Present Remote
-			- Founded and managed a small e-commerce brand with over 90% customer satisfaction
-			- Oversaw customer inquiries, logistics, sourcing, and Instagram-based promotions
-			- Handled basic store analytics, social media engagement, and fulfillment tracking
+	EXPERIENCE
+Founder (Starter Business) - beBuy Store
+2022 - Present Remote
+- Founded and managed a small e-commerce brand with over 90% customer satisfaction
+- Oversaw customer inquiries, logistics, sourcing, and Instagram-based promotions
+- Handled basic store analytics, social media engagement, and fulfillment tracking
 
-			IT Support Assistant - Child Protection Program Org.
-			2021 - 2022 | Sanaa, Yemen
-			- Delivered IT support to over 50 staff across daily operations
-			- Set up routers/switches and tested configs using Cisco Packet Tracer
-			- Performed malware scans, Linux cron jobs, backups using rsync
-			- Maintained GitHub repos and documented system inventory and logs
+IT Support Assistant - Child Protection Program Org.
+2021 - 2022 | Sanaa, Yemen
+- Delivered IT support to over 50 staff across daily operations
+- Set up routers/switches and tested configs using Cisco Packet Tracer
+- Performed malware scans, Linux cron jobs, backups using rsync
+- Maintained GitHub repos and documented system inventory and logs
 
-			CERTIFICATIONS
-			- TryHackMe Pre-security Certificate 
-			- UniAthena Basics of Machine Learning Algorithms 
-			- Uniathena Basics of Python
-			- Udemy Advanced CSS (Audit only)
-			- Unity GameDev Bootcamp
-			- IRIS Accounting & Language Programs
-			- Kun Foundation for Cultural Development - 2022
+	CERTIFICATIONS
+- TryHackMe Pre-security Certificate 
+- UniAthena Basics of Machine Learning Algorithms 
+- Uniathena Basics of Python
+- Udemy Advanced CSS (Audit only)
+- Unity GameDev Bootcamp
+- IRIS Accounting & Language Programs
+- Kun Foundation for Cultural Development - 2022
 
-			TECHNICAL SKILLS
-			- Systems: Windows, Linux, cron jobs, rsync, malware scanning
-			- Networking: Cisco routers/switches, Wireshark, firewall config, port forwarding
-			- Web & Dev: HTML, CSS (Advanced - ongoing), Python (basic), GitHub, SQL
-			- Tools: Microsoft Office, diagnostic tools (ping, ipconfig), Git, e-commerce dashboards
-			- Other: Instagram marketing, tech documentation, troubleshooting support
+	TECHNICAL SKILLS
+- Systems: Windows, Linux, cron jobs, rsync, malware scanning
+- Networking: Cisco routers/switches, Wireshark, firewall config, port forwarding
+- Web & Dev: HTML, CSS (Advanced - ongoing), Python (basic), GitHub, SQL
+- Tools: Microsoft Office, diagnostic tools (ping, ipconfig), Git, e-commerce dashboards
+- Other: Instagram marketing, tech documentation, troubleshooting support
 
-			SOFT SKILLS
-			- Reliable under pressure and fast learner
-			- Tech-savvy and detail-oriented
-			- Disciplined with strong time management
-			- Good communicator and solution-oriented
+	SOFT SKILLS
+- Reliable under pressure and fast learner
+- Tech-savvy and detail-oriented
+- Disciplined with strong time management
+- Good communicator and solution-oriented
 
-			LANGUAGES
-			- Arabic - Native
-			- English - Fluent
-			- Indonesian - Moderate
+	LANGUAGES
+- Arabic - Native
+- English - Fluent
+- Indonesian - Moderate
 		</pre>
 		<a href="resume.pdf" download>Download Full Resume PDF</a>
 	</section>
@@ -172,6 +167,23 @@
 		const toggleBtn = document.getElementById('toggleMode');
 		toggleBtn.addEventListener('click', () => {
 			document.body.classList.toggle('light-mode');
+		});
+	</script>
+	<script>
+		const faders = document.querySelectorAll('fad-in');
+
+		const appearOptions = {
+			threshold: 0.3;
+		};
+		const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+			entries.forEach(entry => {
+				if (!entry.isIntersecting) return;
+				entry.target.classList.add('show');
+				observer.unobserve(entry.target);
+			});
+		}, appearOptions);
+		faders.forEach(fader => {
+			appearOnScroll.observe(fader);
 		});
 	</script>
 </body>
