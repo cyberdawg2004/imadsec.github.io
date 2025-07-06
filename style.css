@@ -1,203 +1,232 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  background-color: #121917;
-  color: #c0c7c0;
-  font-family: 'Share Tech Mono', monospace;
-  line-height: 1.6;
-  transition: background 0.4s, color 0.4s;
+	background-color: #121917;
+	color: #c0c7c0;
+	font-family: 'Share Tech Mono', monospace;
+	line-height: 1.6;
+	transition: background 0.4s, color 0.4s;
 }
 
 a {
-  color: #7fbc8a;
-  text-decoration: none;
+	color: #7fbc8a;
+	text-decoration: none;
 }
 
 a:hover {
-  color: #2ecc71;
+	color: #2ecc71;
 }
 
 .video {
-  position: relative;
-  height: 50vh;
-  width: 100%;
-  overflow: hidden;
+	position: relative;
+	height: 50vh;
+	width: 100%;
+	overflow: hidden;
 }
 
 .bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	z-index: 0;
+	pointer-events:none;
+	opacity: 1;
 }
 
 .overlay-text {
-  position: relative;
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.55);
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.glitch-text {
-  font-size: 4rem;
-  color: #2ecc71;
-  text-shadow: 0 0 10px #2ecc71, 0 0 20px #00ff99;
-  font-family: 'Share Tech Mono', monospace;
-  animation: glitch 2s infinite;
+	position: relative;
+	z-index: 2;
+	background: rgba(0, 0, 0, 0.55);
+	padding: 60px 20px;
+	text-align: center;
 }
 
 .tagline {
-  font-size: 1.3rem;
-  color: #7fbc8a;
-  margin-top: 10px;
-  margin-bottom: 20px;
+	font-size: 1.3rem;
+	color: #7fbc8a;
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
 nav {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 15px;
 }
 
 nav a {
-  font-size: 1.1rem;
-  font-weight: bold;
-  transition: color 0.3s ease;
+	font-size: 1.1rem;
+	font-weight: bold;
+	transition: color 0.3s ease;
 }
 
 section {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 50px 20px;
-  background: rgba(34, 49, 34, 0.9);
-  border-radius: 8px;
-  box-shadow: 0 0 30px #27ae601a;
-  animation: fadeInSlide 1.5s ease forwards;
-  opacity: 0;
+	max-width: 1000px;
+	margin: 60px auto;
+	padding: 50px 20px;
+	background: rgba(34, 49, 34, 0.9);
+	border-radius: 8px;
+	box-shadow: 0 0 30px #27ae601a;
+	animation: fadeInSlide 1.5s ease forwards;
+	opacity: 0;
 }
 
 section.show {
-  opacity: 1;
+	opacity: 1;
 }
 
 h2 {
-  color: #2ecc71;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
+	color: #2ecc71;
+	font-size: 2rem;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#contact {
+	text-align: center;
+}
+
+#contact form {
+	max-width: 500px;
+	margin: 20px auto;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
 #about {
-  text-align: center;
+	text-align: center;
 }
 
 .about-desc {
-  font-size: 1.4rem;
-  color: #c0c7c0;
-  max-width: 800px;
-  margin: 20px auto;
-  line-height: 1.8;
+	font-size: 1.4rem;
+	color: #c0c7c0;
+	max-width: 800px;
+	margin: 20px auto;
+	line-height: 1.8;
 }
 
 .resume-text {
-  font-size: 1rem;
-  background: #111111;
-  padding: 20px;
-  border-radius: 6px;
-  color: #c9d1d9;
-  font-family: 'Share Tech Mono', monospace;
-  white-space: pre-wrap;
-  box-shadow: 0 0 20px #27ae6033;
+	font-size: 1rem;
+	background: #111111;
+	padding: 20px;
+	border-radius: 6px;
+	color: #c9d1d9;
+	font-family: 'Share Tech Mono', monospace;
+	white-space: pre-wrap;
+	box-shadow: 0 0 20px #27ae6033;
 }
 
 #toggleMode {
-  margin-top: 20px;
-  background: none;
-  border: 2px solid #2ecc71;
-  color: #2ecc71;
-  padding: 8px 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.3s ease;
+	margin-top: 20px;
+	background: none;
+	border: 2px solid #2ecc71;
+	color: #2ecc71;
+	padding: 8px 15px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 1rem;
+	transition: all 0.3s ease;
 }
 
 #toggleMode:hover {
-  background: #2ecc71;
-  color: #121917;
+	background: #2ecc71;
+	color: #121917;
 }
 
 body.light-mode {
-  background-color: #f3f3f3;
-  color: #1e1e1e;
+	background-color: #f3f3f3;
+	color: #1e1e1e;
 }
 
 body.light-mode section {
-  background: #ffffff;
-  color: #1e1e1e;
+	background: #ffffff;
+	color: #1e1e1e;
 }
 
 body.light-mode .resume-text {
-  background: #eeeeee;
-  color: #333;
+	background: #eeeeee;
+	color: #333;
 }
+
+.hero-title {
+	font-size: 4rem;
+	color: #2ecc71;
+	font-family: 'Share Tech Mono', monospace;
+	text-align: center
+	text-shadow:
+		0 0 5px #2ecc71, 
+                0 0 15px #2ecc71, 
+                0 0 25px #00ff99, 
+                0 0 35px #00ff99;
+	animation: glowFade 3s ease-in-out infinite alternate;
+	margin-bottom: 10px;
+	z-index: 3;
+	position: relative;
+} 
 
 @keyframes fadeInSlide {
   0% {
-    opacity: 0;
-    transform: translateY(30px);
+	opacity: 0;
+	transform: translateY(30px);
   }
   100% {
-    opacity: 1;
-    transform: translateY(0);
+	opacity: 1;
+	transform: translateY(0);
   }
 }
 
-@keyframes glitch {
-  0% { text-shadow: 0 0 10px #2ecc71; }
-  20% { text-shadow: 2px 0 #00ff99, -2px -2px #00ffcc; }
-  40% { text-shadow: -2px 2px #00ffaa; }
-  60% { text-shadow: 0 0 20px #2ecc71; }
-  80% { text-shadow: 1px -1px #00ff99, -1px 1px #00ffcc; }
-  100% { text-shadow: 0 0 10px #2ecc71; }
+@keyframes glowFade {
+	0% {
+		text-shadow:
+			0 0 5px #2ecc71,
+			0 0 15px #2ecc71,
+			0 0 25px #00ff99,
+			0 0 35px #00ff99;
+	}
+	100% {
+		text-shadow: 
+			0 0 10px #2ecc71,
+			0 0 20px #2ecc71,
+			0 0 30px #00ffaa,
+			0 0 40px #0099aa;
+	} 
 }
 
 @media screen and (max-width: 768px) {
-  .glitch-text {
-    font-size: 2.8rem;
-  }
+	.glitch-text {
+		font-size: 2.8rem;
+ 	 }
 
   .tagline {
-    font-size: 1rem;
+	font-size: 1rem;
   }
 
   nav {
-    flex-direction: column;
-    gap: 10px;
+	flex-direction: column;
+ 	gap: 10px;
   }
 
   .overlay-text {
-    padding: 40px 15px;
+	padding: 40px 15px;
   }
 
   section {
-    padding: 30px 15px;
+	padding: 30px 15px;
   }
 
   .about-desc {
-    font-size: 1.2rem;
+	font-size: 1.2rem;
   }
 }
