@@ -12,12 +12,12 @@ header {
 	padding: 40px 20px;
 	box-shadow: 0 0 40px #00ff9955;
 	background: #182020;
+}
 h1 {
         font-size: 3rem;
         color: #2ecc71;
         text-shadow: 0 0 15px #27ae601a;
         animation: fadeInSlide 2.6s ease forwards;
-        opacity: 0;
 }
 nav {
         margin-top: 20px;
