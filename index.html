@@ -14,17 +14,21 @@
 	<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<h1>ImadSec</h1>
-		<p>Your next cybersecurity weapon</p>
-		<nav>
-			<a href="#projects">Projects</a>
-                        <a href="#about">About</a>
-                        <a href="#resume">Resume</a>
-                        <a href="#gallery">Screenshots</a>
-                        <a href="#tools">Tools</a>
-                        <a href="#contact">Contact</a>
-		</nav>
+	<header class="video">
+		<video autoplay muted loop playsinline class="bg-video">
+			<source scr="assets/video.mp4" type="video/mp4" />
+		</video>
+		<div class="overlay-text">
+			<h1> class="glich-text">Imad Section</h1>
+			<p class="tagline" >Cybersecurity ~ Linux ~ Love & Destruction</p>
+			<nav>
+				<a href="#projects">Projects</a>
+                        	<a href="#about">About</a>
+                       		<a href="#resume">Resume</a>
+                        	<a href="#tools">Tools</a>
+                        	<a href="#contact">Contact</a>
+			</nav>
+		</div>	
 	</header>
 	<section id="projects">
 		<h2>Projects</h2>
@@ -164,5 +168,11 @@
 	<footer>
 		<p>Built by Imad Abdulmalik Baraja - 2025</p>
 	</footer>
+	<script> 
+		const toggleBtn = document.getElementById('toggleMode');
+		toggleBtn.addEventListener('click', () => {
+			document.body.classList.toggle('light-mode');
+		});
+	</script>
 </body>
 </html>
